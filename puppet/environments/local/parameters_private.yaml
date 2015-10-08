@@ -1,0 +1,40 @@
+# default github.com account
+user:
+  name:  handrews
+  email: hha1@cornell.edu
+
+# Set the locale.  Should be a UTF-8 locale for GCD work, but the language
+# can be changed.
+lc_all: en_US.UTF-8
+
+# default oh my zsh theme
+ohmyzsh: gianu
+
+# custom zsh init file contents, if any, to go in ~/.oh-my-zsh/custom/local.zsh
+custom: |
+  # Enable vi-mode command history editing.
+  bindkey -v
+
+  # git convenceince aliases
+  alias gl='git log --decorate'
+  alias gb='git branch'
+  alias gc='git checkout'
+  alias gm='git merge --ff-only'
+  alias gs='git status'
+  alias gd='git diff'
+
+  # Source the dev server's virtualenv
+  source /opt/virtualenv/bin/activate
+
+# ~/.vimrc file contents, if any
+vimrc: |
+    set noeol
+    set bg=dark
+    set nu
+    set tabstop=4
+    set et
+    syn on
+
+    let g:vim_json_syntax_conceal = 0 
+    au BufRead,BufNewFile *.html set filetype=htmldjango
+
