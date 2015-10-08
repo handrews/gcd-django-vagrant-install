@@ -153,7 +153,7 @@ You'll find your web server log in `/vagrant/gcd-django.log`
 
 ### Python Environment
 
-The virtualenv used to run the server is located at `/usr/local/virtualenv`
+The virtualenv used to run the server is located at `/opt/virtualenv`
 Although see https://github.com/GrandComicsDatabase/gcd-django-vagrant-install/issues/4
 for an issue with that installation and plans to move it to `/opt`
 

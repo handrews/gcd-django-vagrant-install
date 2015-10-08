@@ -4,7 +4,7 @@ node 'default' {
   $gcd_vhost_directory          = "${vagrant_directory}/www"
   $tools_directory              = "${vagrant_directory}/tools"
   $script_tools_directory       = "${tools_directory}/scripts"
-  $virtualenv_tools_directory   = '/usr/local/virtualenv'
+  $virtualenv_tools_directory   = '/opt/virtualenv'
 
   $default_user                 = 'vagrant'
 
