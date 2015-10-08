@@ -44,7 +44,7 @@ node 'default' {
   git::reposync { 'gcd-django':
     source_url      => 'https://github.com/GrandComicsDatabase/gcd-django.git',
     destination_dir => "${gcd_vhost_directory}",
-    branch          => 'master',
+    branch          => hiera('branch'),
   }
 
   $gitconfig_user       = hiera('user')
@@ -107,6 +107,11 @@ node 'default' {
     mysql_create_db  => true,
     mysql_privileges => 'ALL',
     require          => Class['mysql']
+  }
+
+  exec { 'tzinfo':
+    command => '/usr/bin/mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql',
+    require => Mysql::Grant["%{hiera('local_gcd_mysql_db')}"]
   }
 
   class { 'python':

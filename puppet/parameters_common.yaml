@@ -15,6 +15,7 @@ lc_all: 'en_US.UTF-8'
 user:
   name:  '' # Your Github.com username
   email: '' # Your Github.com email
+branch: 'master'
 
 # default oh my zsh theme
 ohmyzsh: gianu
